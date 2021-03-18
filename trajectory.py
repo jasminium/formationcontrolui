@@ -31,6 +31,7 @@ from formationplanning.dynamics import dynamics_sim
 
 
 def get_trajectory(target, formation, r, sep):
+    # performance constraints for time optimal path parameterisation.
     a_max = 10
     v_max = 10
 
@@ -48,14 +49,14 @@ def get_trajectory(target, formation, r, sep):
     # target formation sidelength
     l = r  * 2
 
+    # solve the path planning problem.
     x, phi_t = minimise_flux(target, surface, l)
-    print('minimised')
-    # time optimal path parameterisation
-    f = generate_follower_path(x)
 
+    # generate follower paths using leader path (vector algebra)
+    f = generate_follower_path(x)
     x = np.concatenate((x, f), axis=1)
 
-    # leaders
+    # time optimal path parameterisation.
     x = preprocess(x)
     x_t, v_t, a_t, t = reparametrise(x, -v_max, v_max, -a_max, a_max)
     x_t = x_t.reshape((x_t.shape[0], 9, 3))
@@ -75,6 +76,7 @@ def get_trajectory(target, formation, r, sep):
     f4, fd4, fdd4 = dynamics_sim(x_t[0, 7, :], x_t[:, 7, :], dt, u_mod=a_max) # drone 8
     f5, fd5, fdd5 = dynamics_sim(x_t[0, 8, :], x_t[:, 8, :], dt, u_mod=a_max) # drone 9
 
+    # re organise data for easy manipulation using javascript
     x_t = np.stack([x1, x2, x3, x4, f1, f2, f3, f4, f5], axis=0)
     x_t = np.swapaxes(x_t, 1, 2)
     x_t = x_t.tolist()
