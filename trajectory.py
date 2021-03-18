@@ -1,7 +1,7 @@
 """
 FormationPlanning
-Copyright (C) 2020 : Northumbria University
-            Author : John Hartley
+Copyright (C) 2021
+Author : John Hartley
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -22,12 +22,6 @@ import pathlib
 import numpy as np
 
 from formationplanning.sqp import minimise_flux
-from formationplanning.ls import solve_constraints as minimise_flux_wang
-from formationplanning import ls
-import formationplanning.plotting.plot_flux_minimisation_data_hemipshere_single_3_d as plotter
-from formationplanning.plotting.plot_flux_minimisation_data_hemipshere_single_3_d import plot
-from formationplanning.plotting.plot_flux_minimisation_data_hemipshere_single_3_d import plot_2d
-from formationplanning.plotting import animate
 from formationplanning import trajectory
 from formationplanning.trajectory import map_to_time
 from formationplanning.trajectory import interpolate_trajectory
