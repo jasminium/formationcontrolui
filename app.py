@@ -18,12 +18,10 @@ def api():
     
     target = request.args.get('target')
     target = list(map(float, target.split(',')))
-    print(target)
     formation = request.args.get('formation')
     formation = list(map(float, formation.split(',')))
     r = float(request.args.get('r'))
     sep = float(request.args.get('sep'))
-    print(target, formation, r, sep)
     x_t = get_trajectory(target, formation, r, sep)
     return {
         "trajectory": x_t
