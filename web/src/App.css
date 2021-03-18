@@ -1,0 +1,64 @@
+:root {
+  --jh-green: #009E73;
+  --jh-cyan: #56B4E9;
+  --jh-pink: #CC79A7;
+  --jh-yellow: #F0E442;
+  --jh-blue: #0072B2;
+  --jh-orange: #E69F00;
+}
+body {
+  background-color: var(--jh-green);
+  color: white;
+}
+
+a:link{
+  color: white;
+}
+
+.blue-dial::-webkit-slider-thumb {
+  background: var(--jh-yellow);
+}
+
+.bg-diff {
+  background-color: var(--jh-cyan);
+  color:white;
+}
+
+.bg-diff2 {
+  background-color: var(--jh-cyan);
+  color:white;
+}
+
+.space-up-down {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.jh-btn-primary {
+  color: #ffffff;
+  background-color: var(--jh-cyan);
+  border-color: var(--jh-cyan);
+}
+
+.jh-btn-primary:hover, .jh-btn-primary:focus, .jh-btn-primary:active, .jh-btn-primary.active, .open>.dropdown-toggle.jh-btn-primary {
+  color: #fff;
+  background-color: var(--jh-orange);
+  border-color: var(--jh-orange); /*set the color you want here*/
+}
+
+.plot {
+  width: 100%;
+  height: 100%
+}
+
+.footer {
+  padding: 3em;
+}
+
+.p-top {
+  padding-top: 1em;
+}
+
+.p-bottom {
+  padding-bottom: 1em;
+}

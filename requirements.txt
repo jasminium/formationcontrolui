@@ -1,0 +1,2 @@
+Flask==1.1.2
+git+https://gitfront.io/r/johnmatthewhartley/c81e9e54cb2749d718e54ae6517bca517097e1ae/formationplanning.git#egg-formationplanning
