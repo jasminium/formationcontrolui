@@ -1,3 +1,3 @@
 # formationcontrolui
 
-![simulation window](example.png)
+![simulation window](examples/example.png)
