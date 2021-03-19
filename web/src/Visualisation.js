@@ -53,9 +53,6 @@ class PlotlyFig extends React.Component {
       ]
       let t = this.props.target
       let r = this.props.r
-
-      console.log(r)
-      console.log(t)
       
       let p = hemisphere(r, t, 1)
       let p2 = hemisphere(r, t, -1)
