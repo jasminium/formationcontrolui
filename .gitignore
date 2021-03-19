@@ -127,3 +127,4 @@ dmypy.json
 package.sh
 *.zip
 deploy.sh
+flask_dev.sh
