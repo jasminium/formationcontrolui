@@ -1,21 +1,15 @@
+from flask import Flask
 from flask import Flask, request, send_from_directory
-from trajectory import get_trajectory
+from api.trajectory import get_trajectory
 
-app = Flask(__name__)
+application = Flask(__name__, static_url_path='', static_folder='web/build')
 
-"""
-@app.route('/<path:path>')
-def send_js(path):
-    return send_from_directory('static', path)
+@application.route("/", defaults={'path':''})
+def serve(path):
+    return send_from_directory(application.static_folder,'index.html')
 
-@app.route('/')
-def root():
-    return app.send_static_file('index.html')
-"""
-
-@app.route('/api/xt')
+@application.route("/api/xt")
 def api():
-    
     target = request.args.get('target')
     target = list(map(float, target.split(',')))
     formation = request.args.get('formation')
@@ -26,3 +20,6 @@ def api():
     return {
         "trajectory": x_t
     }
+
+if __name__ == '__main__':
+    application.run(debug=False)

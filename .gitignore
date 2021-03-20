@@ -105,6 +105,7 @@ celerybeat-schedule
 .venv
 env/
 venv/
+virt/
 ENV/
 env.bak/
 venv.bak/
@@ -128,3 +129,11 @@ package.sh
 *.zip
 deploy.sh
 flask_dev.sh
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+.ebignore
+
+formationplanning
