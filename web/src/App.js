@@ -15,17 +15,38 @@ function query_builder(url, params) {
   return qUrl
 }
 
-function Instructions() {
+function Instructions2() {
   return (
     <div className="p-top">
       <h3>Controls</h3>
       <ul className="list">
-        <li><strong>Target X, Target Y, Target Z</strong> - The x, y, z centre of the yellow sphere.</li>
+        <li>Target X, Target Y, Target Z - The x, y, z centre of the yellow sphere.</li>
         <li><strong>Target Radius</strong> - Radius of the yellow sphere.</li>
         <li><strong>Formation X, Formation Y, Formation Z</strong> - The x, y, z position of the formation shown by the coloured dots.</li>
         <li><strong>Formation Scale</strong> - Controls the size of formation.</li>
         <li><strong>Run</strong> - Click to run a new simulation</li>
       </ul>
+    </div>
+  );
+}
+
+function Instructions() {
+  return (
+    <div className="p-top">
+      <h3>Controls</h3>
+      <dl className="row">
+        <dt className="col-sm-3">Target X, Target Y, Target Z</dt>
+        <dd className="col-sm-9">The x, y, z centre of the yellow sphere.</dd>
+        <dt className="col-sm-3">Target Radius</dt>
+        <dd className="col-sm-9">Radius of the yellow sphere.</dd>
+        <dt className="col-sm-3">Formation X, Formation Y, Formation Z</dt>
+        <dd className="col-sm-9">The x, y, z position of the formation shown by the coloured dots.</dd>
+        <dt className="col-sm-3">Formation Scale</dt>
+        <dd className="col-sm-9">Controls the size of formation.</dd>
+        <dt className="col-sm-3">Run</dt>
+        <dd className="col-sm-9">Click to run a new simulation.</dd>
+
+      </dl>
     </div>
   );
 }
@@ -140,15 +161,25 @@ class App extends React.Component {
       'sep': this.state.values.slice(7)
     };
 
-    let url = query_builder('/api/xt', params)
-
+    let url = query_builder(process.env.REACT_APP_API_URL + '/api/xt', params)
+    
     fetch(url)
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok){
+        throw Error(response.statusText);
+      }
+      return response.json();
+    })
     .then(this.setState({
       target: params['target'],
       r: params['r']
     }))
-    .then(data => this.setState({trajectoryData: data['trajectory']}));
+    .then(data => this.setState({trajectoryData: data['trajectory']}))
+    .catch(error => {
+      if (process.env.NODE_ENV === 'development'){
+        console.error(error)
+      }
+    })
   }
 
   renderRange(i) {
