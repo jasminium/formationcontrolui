@@ -10,8 +10,10 @@
     "plotly.js": "^1.58.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.2.0",
     "react-plotly.js": "^2.5.1",
     "react-scripts": "4.0.3",
+    "serve": "^11.3.2",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
@@ -37,6 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "http://127.0.0.1:5000"
+  }
 }

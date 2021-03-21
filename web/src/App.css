@@ -15,6 +15,10 @@ a:link{
   color: white;
 }
 
+a:visited {
+  color: white;
+}
+
 .blue-dial::-webkit-slider-thumb {
   background: var(--jh-yellow);
 }
