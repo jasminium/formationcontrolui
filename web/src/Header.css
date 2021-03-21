@@ -1,0 +1,24 @@
+.jh-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.jh-nav ul {
+  margin-top: auto;
+  padding-left: 0;
+}
+
+.il-block {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .jh-nav {
+    display: block;
+  }
+
+  .il-block {
+    display: block;
+  }
+}
