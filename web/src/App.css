@@ -1,17 +1,17 @@
 :root {
-  --jh-green: #009E73;
-  --jh-cyan: #56B4E9;
-  --jh-pink: #CC79A7;
-  --jh-yellow: #F0E442;
-  --jh-blue: #0072B2;
-  --jh-orange: #E69F00;
+  --jh-green: #009e73;
+  --jh-cyan: #56b4e9;
+  --jh-pink: #cc79a7;
+  --jh-yellow: #f0e442;
+  --jh-blue: #0072b2;
+  --jh-orange: #e69f00;
 }
 body {
   background-color: var(--jh-green);
   color: white;
 }
 
-a:link{
+a:link {
   color: white;
 }
 
@@ -25,12 +25,12 @@ a:visited {
 
 .bg-diff {
   background-color: var(--jh-cyan);
-  color:white;
+  color: white;
 }
 
 .bg-diff2 {
   background-color: var(--jh-cyan);
-  color:white;
+  color: white;
 }
 
 .space-up-down {
@@ -44,7 +44,11 @@ a:visited {
   border-color: var(--jh-cyan);
 }
 
-.jh-btn-primary:hover, .jh-btn-primary:focus, .jh-btn-primary:active, .jh-btn-primary.active, .open>.dropdown-toggle.jh-btn-primary {
+.jh-btn-primary:hover,
+.jh-btn-primary:focus,
+.jh-btn-primary:active,
+.jh-btn-primary.active,
+.open > .dropdown-toggle.jh-btn-primary {
   color: #fff;
   background-color: var(--jh-orange);
   border-color: var(--jh-orange); /*set the color you want here*/
@@ -52,7 +56,7 @@ a:visited {
 
 .plot {
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 
 .footer {
