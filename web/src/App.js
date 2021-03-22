@@ -157,7 +157,7 @@ class App extends React.Component {
       sep: this.state.values.slice(7),
     };
 
-    let url = query_builder(process.env.REACT_APP_API_URL + "/api/xt", params);
+    let url = query_builder("/api/xt", params);
 
     fetch(url)
       .then((response) => {
