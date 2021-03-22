@@ -323,7 +323,7 @@ class PlotlyFig extends React.Component {
       },
     ];
     return (
-      <div>
+      <div style={{ minHeight: 450 }}>
         <Plot
           onUpdate={() => this.props.onChange()}
           data={data}
