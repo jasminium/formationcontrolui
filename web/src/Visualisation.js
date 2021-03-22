@@ -70,6 +70,9 @@ class PlotlyFig extends React.Component {
         t: 0,
         pad: 10,
       },
+      legend: {
+        orientation: "h",
+      },
     };
     let data = [
       {
@@ -327,7 +330,7 @@ class PlotlyFig extends React.Component {
           layout={layout}
           useResizeHandler={true}
           config={{ responsive: true }}
-          style={{ width: "100%", minHeight: "100%" }}
+          style={{ width: "100%", height: "100%" }}
         />
       </div>
     );
