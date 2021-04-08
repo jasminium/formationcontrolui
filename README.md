@@ -10,6 +10,8 @@ The principle idea is that a formation can be led by maximizing the sum of an el
 
 The algorithm is efficient since only the UAVs on the front face of the formation are required to measure the flux and therefore many followers can be added to the formation without increasing the dimensionality of the problem. Also the algorithm is ideal for applications where the formation must maximally cover the target.
 
-# Check out our paper
+# Cite
+
+Check out our paper
 
 [John Hartley, Hubert P. H. Shum, Edmond S. L. Ho, He Wang, Subramanian Ramamoorthy - Formation Control for UAVs Using a Flux Guided Approach](https://arxiv.org/abs/2103.09184)
