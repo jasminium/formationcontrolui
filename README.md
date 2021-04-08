@@ -12,4 +12,4 @@ The algorithm is efficient since only the UAVs on the front face of the formatio
 
 # Check out our paper
 
-[John Hartley, Hubert P. H. Shum, Edmond S. L. Ho, He Wang, Subramanian Ramamoorthy - Formation Control for UAVs Using a Flux Guided Approach - (https://arxiv.org/abs/2103.09184)
+[John Hartley, Hubert P. H. Shum, Edmond S. L. Ho, He Wang, Subramanian Ramamoorthy - Formation Control for UAVs Using a Flux Guided Approach](https://arxiv.org/abs/2103.09184)
