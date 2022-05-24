@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="bg-diff">
       <div className=" jh-nav container space-up-down">
-        <h1 className="il-block">AI UAV Flight Simulator</h1>
+        <h1 className="il-block">Flux Guided Flight Simulator</h1>
         <ul className="il-block">
           <li className="d-inline-block">
             <a href="https://github.com/jasminium/formationcontrolui">
@@ -20,6 +20,7 @@ function Header() {
           </li>
         </ul>
       </div>
+      <hr />
     </header>
   );
 }

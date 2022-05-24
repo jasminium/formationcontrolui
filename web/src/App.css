@@ -1,5 +1,5 @@
 :root {
-  --jh-green: #009e73;
+  --jh-green: #56b4e9;
   --jh-cyan: #56b4e9;
   --jh-pink: #cc79a7;
   --jh-yellow: #f0e442;
@@ -40,8 +40,8 @@ a:visited {
 
 .jh-btn-primary {
   color: #ffffff;
-  background-color: var(--jh-cyan);
-  border-color: var(--jh-cyan);
+  background-color: var(--jh-pink);
+  border-color: var(--jh-pink);
 }
 
 .jh-btn-primary:hover,
