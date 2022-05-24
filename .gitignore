@@ -135,5 +135,3 @@ flask_dev.sh
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 .ebignore
-
-formationplanning
