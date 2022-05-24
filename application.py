@@ -1,5 +1,6 @@
 from flask import Flask
-from flask import Flask, request, send_from_directory
+from flask import request
+from flask import send_from_directory
 from api.trajectory import get_trajectory
 
 application = Flask(__name__, static_url_path='', static_folder='web/build')
