@@ -1,7 +1,3 @@
-# Flux Guided Flight Simulator
-
-Simulate the motion of a formation of UAVs tasked with surrounding a remote target.
-
 ![simulation window](examples/example.png)
 
 Flux guiding is formation control algorithm for guiding formations of UAVs toward a remote target. The algorithm is packaged [here](https://github.com/jasminium/formationplanning) 
